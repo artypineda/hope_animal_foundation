@@ -1,0 +1,25 @@
+
+/** Start Global Variables **/
+:root {
+
+	--background-blue: #a3d9db;
+    
+	--desktop: 1199px;
+	--desktopSm: 1024px;
+	--desktopLg: 1399px;
+	--tablet: 991px;
+	--devices: 768px;
+	--mobile: 625px;
+
+	--h1-main: 50px;
+	--h1-small: 44px;
+	--h2-main: 36px;
+	--h2-small: 32px;
+	--h3-main: 36px;
+	--h3-small: 19px;
+	--p-main: 16px;
+	--p-small: 14px;
+	--menu-small: 12px;
+ }
+ /** end variables **/
+
