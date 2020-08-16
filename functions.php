@@ -20,7 +20,7 @@ if ( ! function_exists( 'hope_animal_foundation_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'hope_animal_foundation' ),
-				// 'menu-2' => esc_html__( 'Above The Header', 'calviva_health' ),
+				'menu-2' => esc_html__( 'Above The Header', 'hope_animal_foundation' ),
 			)
 		);
 
@@ -110,6 +110,7 @@ function hope_animal_foundation_scripts() {
 
 	wp_style_add_data( 'hope_animal_foundation-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'hope_animal_foundation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'hope_animal_foundation-custom-js', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -159,5 +160,14 @@ echo '<style type="text/css">
 }
 add_action( 'admin_head', 'fix_svg' );
 
+
+// Type Kit
+function typekit_enqueue_scripts() {
+	wp_enqueue_script( 'mytheme-typekit', 'https://use.typekit.net/eon7gyh.js', array(), '1.0' );
+	wp_add_inline_script( 'mytheme-typekit', 'try{Typekit.load({ async: true });}catch(e){}' );
+ }
+ add_action( 'wp_enqueue_scripts', 'typekit_enqueue_scripts' );
+
+ 
 // Kill ACF Pro Admin Panel for Everyone
 //  add_filter('acf/settings/show_admin', '__return_false');

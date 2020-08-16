@@ -2,14 +2,12 @@
 /** Start Global Variables **/
 :root {
 
-	--background-blue: #a3d9db;
-    
-	--desktop: 1199px;
-	--desktopSm: 1024px;
-	--desktopLg: 1399px;
-	--tablet: 991px;
-	--devices: 768px;
-	--mobile: 625px;
+	--blue-aqua: #9CE3E3;
+	--rich-blue: #0A3269;
+
+	--hero-heading: 82px;
+	--hero-paragraph: 20px;
+	--hero-button-size: 18px;
 
 	--h1-main: 50px;
 	--h1-small: 44px;
@@ -20,6 +18,15 @@
 	--p-main: 16px;
 	--p-small: 14px;
 	--menu-small: 12px;
+
+	--min-desktop-lg: 1399px;
+	--max-desktop: 1398px;
+	--min-desktop: 991px;
+	--max-tablet: 990px;
+	--min-tablet: 640px;
+	--max-mobile: 639.5px;
+
  }
+
  /** end variables **/
 
