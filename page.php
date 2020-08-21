@@ -7,44 +7,37 @@
 get_header();
 ?>
 
+
 	<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile;
+		<?php // Top-Page Hero Component and Content
+			while ( have_posts() ) :
+				the_post();
+				get_template_part( 'template-parts/content', 'page' );
+			endwhile;
 		?>
-
 	</main>
-
-
-	<?php if( have_rows('full_page_hero') ): ?>
-		<?php while( have_rows('full_page_hero') ): the_row(); ?>
-
-		<section id="post-<?php the_ID(); ?>" class="dynamic-full-page-hero" style="background-color:<?php the_field('hero_background_color'); ?>" >
-
-			<?php if( get_row_layout() == 'paragraph' ): ?>
-				<?php the_sub_field('paragraph'); ?>
-			<?php elseif( get_row_layout() == 'image' ): 
-				$image = get_sub_field('image');
-				?>
-				<figure>
-					<?php echo wp_get_attachment_image( $image['ID'], 'full' ); ?>
-					<figcaption><?php echo $image['caption']; ?></figcaption>
-				</figure>
-			<?php endif; ?>
-
-		</section>
-		
+	
+    <?php if( have_rows('layout_inside') ): ?>
+		<?php while( have_rows('layout_inside') ): the_row(); ?>
+                    
+        	<?php
+        	    require('template-custom/inner/full-page-hero.php');
+        	    require('template-custom/inner/three-columns-text.php');
+        		require('template-custom/inner/two-columns-locations.php');
+        	    require('template-custom/inner/two-columns-lists.php');
+	        	require('template-custom/inner/cta-v1.php');
+	        	require('template-custom/inner/cta-v2.php');
+	        	require('template-custom/inner/cta-donate.php');
+	        	require('template-custom/inner/button.php');
+	        	require('template-custom/inner/two-columns-combo-v1.php');
+	        	require('template-custom/inner/two-columns-combo-v2.php');
+	        	require('template-custom/inner/two-columns-pricing.php');
+        	?>
+        
 		<?php endwhile; ?>
 	<?php endif; ?>
 
+	
 <?php
 get_footer();

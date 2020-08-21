@@ -21,6 +21,8 @@ if ( ! function_exists( 'hope_animal_foundation_setup' ) ) :
 			array(
 				'menu-1' => esc_html__( 'Primary', 'hope_animal_foundation' ),
 				'menu-2' => esc_html__( 'Above The Header', 'hope_animal_foundation' ),
+				'menu-3' => esc_html__( 'Services Nav Menu - Footer', 'hope_animal_foundation' ),
+				'menu-4' => esc_html__( 'Support Us Nav Menu - Footer', 'hope_animal_foundation' ),
 			)
 		);
 
@@ -94,8 +96,8 @@ function hope_animal_foundation_widgets_init($name, $id, $description,$beforeWid
 }
  
 function multiple_widget_init(){
-    hope_animal_foundation_widgets_init('Hope AF Sidebar', 'hopeaf-sd-1', 'Add Widgets Here', '<section id="%1$s" class="widget %2$s">', '</section>', '<h2 class="widget-title">', '</h2>');
-    // widget_registration('Contact Us', 'footer-details', 'Contact Details Goes Here', '<section id="%1$s" class="widget %2$s">', '</section>', '<h2 class="widget-title">', '</h2>');
+    //hope_animal_foundation_widgets_init('Hope AF Sidebar', 'hopeaf-sd-1', 'Add Widgets Here', '<section id="%1$s" class="widget %2$s">', '</section>', '<h2 class="widget-title">', '</h2>');
+    hope_animal_foundation_widgets_init('Contact Us', 'footer-details', 'Contact Details Goes Here', '<section id="%1$s" class="widget %2$s">', '</section>', '<h2 class="widget-title">', '</h2>');
 }
 add_action('widgets_init', 'multiple_widget_init');
 
@@ -106,6 +108,7 @@ function hope_animal_foundation_scripts() {
 	wp_enqueue_style( 'hope_animal_foundation-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'hope_animal_foundation-variables', get_template_directory_uri() . '/styles/variables.css', array(), _S_VERSION );
 	wp_enqueue_style( 'hope_animal_foundation-main', get_template_directory_uri() . '/styles/main.css', array(), _S_VERSION );
+	wp_enqueue_style( 'hope_animal_foundation-mobile', get_template_directory_uri() . '/styles/mobile.css', array(), _S_VERSION );
 	wp_enqueue_style( 'hope_animal_foundation-components', get_template_directory_uri() . '/styles/components.css', array(), _S_VERSION );
 
 	wp_style_add_data( 'hope_animal_foundation-style', 'rtl', 'replace' );

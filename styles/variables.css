@@ -2,22 +2,29 @@
 /** Start Global Variables **/
 :root {
 
-	--blue-aqua: #9CE3E3;
+	--blue-aqua: #a3d9db;
+	--blue-aqua-2: #edf9f9;
+	--blue-aqua-2b: rgba(156, 227, 227, 20);
+	--blue-aqua-3: #7ac6d0;
 	--rich-blue: #0A3269;
+	--dark-gray: #818181;
 
-	--hero-heading: 82px;
+	--hero-heading: 84px;
 	--hero-paragraph: 20px;
-	--hero-button-size: 18px;
+	--hero-button-size: 16px;
+	--hero-content-color: #818181;
+	--hero-content-size: 16px;
 
 	--h1-main: 50px;
 	--h1-small: 44px;
-	--h2-main: 36px;
-	--h2-small: 32px;
+	--h2-main: 44px;
+	--h2-small: 36px;
 	--h3-main: 36px;
 	--h3-small: 19px;
 	--p-main: 16px;
 	--p-small: 14px;
 	--menu-small: 12px;
+	--footer-li: 20px;
 
 	--min-desktop-lg: 1399px;
 	--max-desktop: 1398px;

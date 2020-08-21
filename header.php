@@ -21,6 +21,21 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'hope_animal_foundation' ); ?></a>
 
+	<?php  //Home Page Only
+		if( have_rows('layouts_one') ): ?>
+    	<?php while( have_rows('layouts_one') ): the_row(); ?>
+            <?php if( get_row_layout() == 'full_page_hero' ): ?>
+	
+        	<header id="masthead" class="site-header" style="background-color:<?php the_sub_field('hero_background_color'); ?>">
+	    
+            <?php endif; ?>
+        <?php endwhile; ?>
+
+	<?php else : // fallback ?>
+		<header id="masthead" class="site-header">
+	<?php endif; ?>
+	
+	
 	<div class="aboveHeaderMenu">
 		<?php
 			wp_nav_menu( array(
@@ -30,40 +45,56 @@
 			));
 		?>
 	</div>
-	
-	<header id="masthead" class="site-header">
-		<div class="head-centered">
+    	
+	<div class="head-centered">
 
-			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php
-				else :
-					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
-				$hope_animal_foundation_description = get_bloginfo( 'description', 'display' );
-				if ( $hope_animal_foundation_description || is_customize_preview() ) :
-					?>
-					<p class="site-description"><?php echo $hope_animal_foundation_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-				<?php endif; ?>
-			</div><?php // END .site-branding ?>
-
-			<nav id="site-navigation" class="main-navigation">
-				<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php //esc_html_e( 'Primary Menu', 'hope_animal_foundation' ); ?></button> -->
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
+		<div class="site-branding">
+			<?php
+			if ( is_front_page() ) :
+    			the_custom_logo();
 				?>
-			</nav><?php // END #site-navigation ?>
+				<h1 class="site-title">
+				    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			    </h1>
+				<?php
+			else : 
+                ?>
+			    <a class="custom-logo-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-current="page">
+    		        <img class="custom-logo" src="<?php bloginfo('template_url'); ?>/src/hope-animal-foundation-logo-blue-01.svg">
+		        </a>
+				<?php
+			endif;
+			$hope_animal_foundation_description = get_bloginfo( 'description', 'display' );
+			if ( $hope_animal_foundation_description || is_customize_preview() ) :
+				?>
+				<p class="site-description"><?php echo $hope_animal_foundation_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<?php endif; ?>
+		</div><?php // END .site-branding ?>
+    
+    		<nav id="site-navigation" class="main-navigation">
+    			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php //esc_html_e( 'Primary Menu', 'hope_animal_foundation' ); ?></button>
+    			<?php
+    			wp_nav_menu(
+    				array(
+    					'theme_location' => 'menu-1',
+    					'menu_id'        => 'primary-menu',
+    				)
+    			);
+    			?>
+    		</nav><?php // END #site-navigation ?>
 
-		</div>
+    	</div>
+    		
+    	<div class="head-mobile">
+			<?php if ( is_front_page() ) : ?>
+    		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+    			<?php the_custom_logo(); ?>
+			</a>
+			<?php else : ?>
+			    <a class="custom-logo-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-current="page">
+    		        <img class="custom-logo" src="<?php bloginfo('template_url'); ?>/src/hope-animal-foundation-logo-blue-01.svg">
+		        </a>
+			<?php endif; ?>
+    	</div>
+    		
 	</header><?php // END #masthead --> ?>
