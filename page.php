@@ -23,6 +23,7 @@ get_header();
                     
         	<?php
         	    require('template-custom/inner/full-page-hero.php');
+	        	require('template-custom/inner/horizontal-image.php');
         	    require('template-custom/inner/three-columns-text.php');
         		require('template-custom/inner/two-columns-locations.php');
         	    require('template-custom/inner/two-columns-lists.php');
@@ -30,9 +31,16 @@ get_header();
 	        	require('template-custom/inner/cta-v2.php');
 	        	require('template-custom/inner/cta-donate.php');
 	        	require('template-custom/inner/button.php');
+	        	require('template-custom/inner/button-banner.php');
 	        	require('template-custom/inner/two-columns-combo-v1.php');
 	        	require('template-custom/inner/two-columns-combo-v2.php');
 	        	require('template-custom/inner/two-columns-pricing.php');
+	        	require('template-custom/inner/pricing-packages.php');
+	        	require('template-custom/inner/pricing-list.php');
+	        	require('template-custom/inner/promotions-data.php');
+	        	require('template-custom/inner/subscribe.php');
+	        	require('template-custom/inner/contact.php');
+	        	require('template-custom/inner/hours-of-operation.php');
         	?>
         
 		<?php endwhile; ?>

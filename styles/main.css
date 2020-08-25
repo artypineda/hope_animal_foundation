@@ -379,6 +379,8 @@ body:not(.home) main#primary {
     margin-left: 0;
     margin-right: 0;
 	margin-top: -120px;
+	padding-left: 45px;
+	padding-right: 45px;
 	justify-content: center;
 	align-items: center;
 	color: var(--hero-content-color);
@@ -390,6 +392,12 @@ body:not(.home) main#primary h1 {
 	color: var(--rich-blue);
 	font-weight: 800;
 }
+	@media (max-width: 639.5px){
+		body:not(.home) main#primary h1 {
+			font-size: calc(var(--hero-heading) - 2em);
+		}
+	}
+	
 body:not(.home) main#primary p {
 	font-size: var(--hero-content-size);
 }
