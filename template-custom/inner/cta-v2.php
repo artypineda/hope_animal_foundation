@@ -20,9 +20,10 @@
                     $link_target = $link['target'] ? $link['target'] : '_self';
                     ?>
                     
-                    <button class="hopebtn1 mt35"
-                        style="border: 3px solid var(--blue-aqua-3);">
+                    <button class="hopebtn1 mt35 light3"
+                        style="border: 2px solid var(--blue-aqua-3);">
                         <a href="<?php echo esc_url( $link_url ); ?>"
+                            class="wt"
                             target="<?php echo esc_attr( $link_target ); ?>"
                             style="color:<?php the_sub_field('cta_title_color'); ?>;">
                             <?php echo esc_html( $link_title ); ?>

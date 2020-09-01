@@ -1,8 +1,8 @@
 <?php
-    //Two-Columns Listings / UL Component
-	if( get_row_layout() == 'two_columns_lists' ):
+    //Two-Columns Listings / UL Component on Blue BG
+	if( get_row_layout() == 'two_columns_lists_2' ):
 ?>
-    <section class="two-up-lists">
+    <section class="two-up-lists simple-lists-footer">
        <div class="container-simple two-up-list">
            
            <?php if( get_sub_field('two_col_title') ): ?>

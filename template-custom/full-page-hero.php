@@ -20,8 +20,8 @@
 
                     <?php if ( get_sub_field('hero_button_link') ): ?>
                     <form>
-                        <button class="hopebtn1" type="submit" formaction="<?php the_sub_field('hero_button_link'); ?>"
-                        style="border: 4px solid <?php the_sub_field('hero_button_bg'); ?>; background-color:<?php the_sub_field('hero_button_bg'); ?>" >
+                        <button class="hopebtn1 light1" type="submit" formaction="<?php the_sub_field('hero_button_link'); ?>"
+                        style="border: 2px solid <?php the_sub_field('hero_button_bg'); ?>; background-color:<?php the_sub_field('hero_button_bg'); ?>" >
                             <?php the_sub_field('hero_button_text'); ?>
                         </button>
                     </form>

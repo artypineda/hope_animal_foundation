@@ -11,8 +11,8 @@
             $link_title = $link['title'];
             $link_target = $link['target'] ? $link['target'] : '_self';
             ?>
-            <button class="hopebtn2"
-                style="border: 3px solid <?php the_sub_field('book_appointment_button_color') ?>;
+            <button class="hopebtn2 light0"
+                style="border: 2px solid <?php the_sub_field('book_appointment_button_color') ?>;
                 background-color:<?php the_sub_field('book_appointment_button_color'); ?>; ">
                 <a href="<?php echo esc_url( $link_url ); ?>"
                     style="color: white;"

@@ -27,6 +27,7 @@ get_header();
         	    require('template-custom/inner/three-columns-text.php');
         		require('template-custom/inner/two-columns-locations.php');
         	    require('template-custom/inner/two-columns-lists.php');
+        	    require('template-custom/inner/two-columns-lists-2.php');
 	        	require('template-custom/inner/cta-v1.php');
 	        	require('template-custom/inner/cta-v2.php');
 	        	require('template-custom/inner/cta-donate.php');
@@ -41,6 +42,13 @@ get_header();
 	        	require('template-custom/inner/subscribe.php');
 	        	require('template-custom/inner/contact.php');
 	        	require('template-custom/inner/hours-of-operation.php');
+	        	require('template-custom/inner/vet-staff.php');
+	        	require('template-custom/inner/more-staff.php');
+	        	require('template-custom/inner/employment.php');
+				require('template-custom/inner/sponsors.php');
+				require('template-custom/inner/margins.php');
+        	    require('template-custom/inner/columns.php');
+        	    require('template-custom/inner/columns2.php');
         	?>
         
 		<?php endwhile; ?>

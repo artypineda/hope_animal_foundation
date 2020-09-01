@@ -14,7 +14,7 @@
                         <?php if ( get_sub_field('button_1_link') ): ?>
                         <form>
                             <button class="hopebtn1" type="submit" formaction="<?php the_sub_field('button_1_link'); ?>"
-                            style="border: 3px solid <?php the_sub_field('button_1_color') ?>; background-color:<?php the_sub_field('button_1_color'); ?>" >
+                            style="border: 2px solid <?php the_sub_field('button_1_color') ?>; background-color:<?php the_sub_field('button_1_color'); ?>" >
                                 <?php the_sub_field('button_1_text'); ?>
                             </button>
                         </form>
@@ -23,7 +23,7 @@
                         <?php if ( get_sub_field('button_2_link') ): ?>
                         <form>
                             <button class="hopebtn2" type="submit" formaction="<?php the_sub_field('button_2_link'); ?>"
-                            style="border: 3px solid <?php the_sub_field('button_2_color') ?>; color:<?php the_sub_field('button_2_color'); ?>" >
+                            style="border: 2px solid <?php the_sub_field('button_2_color') ?>; color:<?php the_sub_field('button_2_color'); ?>" >
                                 <?php the_sub_field('button_2_text'); ?>
                             </button>
                         </form>

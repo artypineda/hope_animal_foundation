@@ -24,11 +24,11 @@
                         $link_target = $link['target'] ? $link['target'] : '_self';
                         ?>
                         
-                        <button class="hopebtn1 mt35"
-                            style="border: 3px solid var(--blue-aqua-3);
-                            background-color:<?php the_sub_field('background_color'); ?>; ">
+                        <button class="hopebtn1 mt35 light3"
+                            style="border: 2px solid var(--blue-aqua-3);">
                             <a href="<?php echo esc_url( $link_url ); ?>"
                                 style="color: var(--rich-blue);"
+                                class="wt"
                                 target="<?php echo esc_attr( $link_target ); ?>">
                                     <?php echo esc_html( $link_title ); ?>
                             </a>
