@@ -13,9 +13,10 @@
                 while( have_rows('promotion_data') ): the_row(); ?>
                     <li class="promo">
                         <?php
+                            $dynamic_img = get_sub_field('promo_popup');
                             $image = get_sub_field('promotion_image');
                             if( !empty( $image ) ): ?>
-                                <?php echo wp_get_attachment_image( $image['ID'], 'medium', "", ["class" => "promo_img"] ); ?>
+                                <?php echo wp_get_attachment_image( $image['ID'], 'medium', "", ["class" => "promo_img $dynamic_img"] ); ?>
                             <?php endif; ?>
                         <h2><?php the_sub_field('promotion_title'); ?></h2>
                         <span>
@@ -27,12 +28,13 @@
                                 $link_target = $link['target'] ? $link['target'] : '_self';
                                 ?>
                                 
-                                <a class="col-link" style="color:<?php echo the_sub_field('col3_color'); ?>"
+                                <a class="col-link <?php echo $dynamic_img ?>" style="color:var(--rich-blue);"
                                     href="<?php echo esc_url( $link_url ); ?>"
                                     target="<?php echo esc_attr( $link_target ); ?>">
                                         <?php echo esc_html( $link_title ); ?>
                                         <span>
-                                            <img src="<?php bloginfo('template_url'); ?>/src/btn-arrow.svg" alt="link url for promotion" width="25">
+                                            <img src="<?php bloginfo('template_url'); ?>/src/btn-arrow.svg"
+                                            alt="link url for promotion" width="25" class="$dynamic_img">
                                         </span>
                                 </a>
                                 

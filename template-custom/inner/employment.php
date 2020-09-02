@@ -28,13 +28,19 @@
                                     <h2><?php the_sub_field('title'); ?></h2>
                                     <?php the_sub_field('description'); ?>
                                 
-                                    <form>
-                                        <button class="hopebtn1" type="submit" formaction="mailto:info@hopeaf.com?subject=New Application Submission" 
-                                        style="border: 4px solid var(--rich-blue)";>
-                                            Submit Application
-                                        </button>
-                                    </form>
-
+                                    <!--  <form class="dt">-->
+                                    <!--    <button class="hopebtn1 light3" onclick="location.href='mailto:info@hopeaf.com';" type="submit"-->
+                                    <!--    style="border:2px solid var(--blue-aqua-3); color: var(--rich-blue);">-->
+                                    <!--        Submit Application-->
+                                    <!--    </button>-->
+                                    <!--</form>-->
+                                    <a href="mailto:info@hopeaf.com?subject=New Application Submission">
+                                     <button class="hopebtn1 light3"
+                                        style="border:2px solid var(--blue-aqua-3); color: var(--rich-blue);">
+                                        Submit Application
+                                    </button>
+                                    </a>
+                                    
                                 </div>
                             </div>
 

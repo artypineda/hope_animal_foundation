@@ -334,6 +334,11 @@ h1.hero-heading {
     line-height: 0;
 }
 
+.container-simple {
+    z-index: 0;
+}
+
+
 /**
 * Wide Image
 ************/
@@ -589,6 +594,12 @@ a.col-link span img {
     margin-left: 15%;
     margin-right: 15%;
 }
+    @media (max-width: 990px){
+    .container-two-up > .col-map .foreground-image {
+            transform: translateY(-43%);
+        }
+    }
+
 .col-map .map-settings {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -676,6 +687,7 @@ a.col-link span img {
     text-align: center;
     margin: 0 auto;
     font-size: calc(var(--h2-main) - 12px);
+    line-height: 1.25;
 }
 .simple2 h2:after {
     content: '';
@@ -872,6 +884,12 @@ a.col-link span img {
 .col-data-2 h2 {
     color: var(--rich-blue);
 }
+    @media (max-width: 990px){
+        .col-data-2 h2 {
+            font-size: var(--h2-small);
+        }
+    }
+
 .col-data-2 h2:after {
     content: '';
     display: block;
@@ -1223,7 +1241,7 @@ a.col-link span img {
 }
     @media (min-width: 991px){
         .promos ul li {
-            flex: 0 0 33.3%;
+            flex: 1 0 33.3%;
             padding: 2.5% 2%;
         }
     }
@@ -1235,7 +1253,7 @@ a.col-link span img {
 }
     @media (min-width: 991px){
         .promos ul li img.promo_img {
-            height: 282px;
+            height: 325px;
             width: 100%;
             object-fit: cover;
         }
@@ -1440,6 +1458,8 @@ div.ctct-form-embed form.ctct-form-custom label.ctct-form-label {
     margin-right: auto;
     justify-content: space-evenly;
     width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
 }
     @media (min-width: 991px){
         .container-simple.banner2 .info {

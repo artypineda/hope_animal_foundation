@@ -1,6 +1,6 @@
 //custom js
 
-//viewport effects
+//viewport
 var inScreen = document.querySelectorAll('.inScreen');
 
 function onScroll() {
@@ -23,3 +23,17 @@ function elementVisible(el) {
 }
 
 window.addEventListener("scroll", onScroll);
+
+
+//.mobile ul.sub-menu
+let hiddenMenu = document.querySelector('.mobile-menu ul.sub-menu');
+let parentLink = hiddenMenu.parentNode.querySelector('a');
+hiddenMenu.style.display = 'none';
+
+menu_worker = (e) => {
+    let foundHiddenUL = e.target.parentNode.querySelector('ul');
+    foundHiddenUL.style.display = 'block';
+}
+
+parentLink.addEventListener('mouseenter', menu_worker);
+
