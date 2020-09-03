@@ -10,15 +10,23 @@
                 <span><?php the_sub_field('address'); ?></span>
 
                 <ul>
+                    <?php if(get_sub_field('phone')): ?>
                     <li><strong>Phone</strong><br/>
                         <?php the_sub_field('phone'); ?>
                     </li>
+                    <?php endif; ?>
+                    
+                    <?php if(get_sub_field('fax')):?>
                     <li><strong>Fax</strong><br/>
                         <?php the_sub_field('fax'); ?>
                     </li>
+                    <?php endif; ?>
+                    
+                    <?php if(get_sub_field('email')): ?>
                     <li><strong>Email</strong><br/>
                         <?php the_sub_field('email'); ?>
                     </li>
+                    <?php endif; ?>
                 </ul>
 		    </div>
 			<div class="col-right">
