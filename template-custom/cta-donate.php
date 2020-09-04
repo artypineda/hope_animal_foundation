@@ -11,13 +11,35 @@
                         <h2 style="color:<?php the_sub_field('title_color'); ?>"><?php the_sub_field('title_for_featured_image'); ?></h2>
                         <?php the_sub_field('featured_image_paragraph'); ?>
                         
-                        <?php if ( get_sub_field('button_1_link') ): ?>
+                        <!-- <?php //if ( get_sub_field('button_1_link') ): ?>
                         <form>
-                            <button class="hopebtn1" type="submit" formaction="<?php the_sub_field('button_1_link'); ?>"
-                            style="border: 2px solid <?php the_sub_field('button_1_color') ?>; background-color:<?php the_sub_field('button_1_color'); ?>" >
-                                <?php the_sub_field('button_1_text'); ?>
+                            <button class="hopebtn1" type="submit" formaction="<?php //the_sub_field('button_1_link'); ?>"
+                            style="border: 2px solid <?php// the_sub_field('button_1_color') ?>; background-color:<?php //the_sub_field('button_1_color'); ?>" >
+                                <?php //the_sub_field('button_1_text'); ?>
                             </button>
                         </form>
+                        <?php// endif; ?> -->
+
+
+                        <?php if(get_sub_field('button_1_link') ): ?>
+                            <?php 
+                            $link = get_sub_field('button_1_link');
+                            if( $link ): 
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';
+                            ?>
+                            
+                            <button class="hopebtn1"
+                                style="border: 2px solid <?php the_sub_field('button_1_color') ?>; background-color:<?php the_sub_field('button_1_color'); ?>">
+                                <a href="<?php echo esc_url( $link_url ); ?>"
+                                    target="<?php echo esc_attr( $link_target ); ?>"
+                                    style="color:<?php the_sub_field('cta_title_color'); ?>;">
+                                    <?php echo esc_html( $link_title ); ?>
+                                </a>
+                            </button>
+            
+                            <?php endif; ?>
                         <?php endif; ?>
                     
                         <?php if ( get_sub_field('button_2_link') ): ?>

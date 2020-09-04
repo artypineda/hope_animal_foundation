@@ -81,8 +81,12 @@
     }
 }
 
+.inScreen {
+    opacity: 0;
+}
 .slideUp {
   animation: 1s ease-in-out slideInFromBottom2;
+  opacity: 1;
 }
 
 
@@ -193,6 +197,7 @@ h1.hero-heading {
 
 
 
+/**states**/
 .light0:hover, .light0:focus {
     background: white!important;
 }
@@ -226,6 +231,38 @@ h1.hero-heading {
     text-decoration: none;
 }
 
+.bl-over-wh {
+    background: var(--rich-blue);
+    border: 2px solid var(--rich-blue);
+}
+.bl-over-wh:hover,.bl-over-wh:focus {
+    background: none;
+    border-color: var(--rich-blue);
+}
+
+.bl-over-wh a {
+    color: white;
+}
+.bl-over-wh:hover a,
+.bl-over-wh:focus a{
+    color: var(--rich-blue);
+}
+
+.wh-over-blue {
+    background: none;
+    border: 2px solid var(--rich-blue);
+}
+.wh-over-blue:hover,.wh-over-blue:focus {
+    background: var(--rich-blue);
+    border-color: var(--rich-blue);
+}
+.wh-over-blue a {
+    color: var(--rich-blue);
+}
+.wh-over-blue:hover a,
+.wh-over-blue:focus a{
+    color: white;
+}
 
 
 .wp-block-button__link {

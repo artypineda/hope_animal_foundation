@@ -19,12 +19,27 @@
 						<h2 class="col-info" style="color:<?php the_sub_field('col3_color'); ?>">
 							<?php echo the_sub_field('content_left'); ?>
 						</h2>
-						<a class="col-link" style="color:<?php echo the_sub_field('col3_color'); ?>" href="<?php the_sub_field('content_link_left'); ?>">
-							Learn More
-							<span>
-	                            <img src="<?php bloginfo('template_url'); ?>/src/btn-arrow.svg" alt="link url for column item" width="25">
-							</span>
-						</a>
+						
+						<?php if(get_sub_field('content_link_left') ): ?>
+                            <?php 
+                            $link = get_sub_field('content_link_left');
+                            if( $link ): 
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';
+                            ?>
+                                <a class="col-link" style="color:<?php echo the_sub_field('col3_color'); ?>"
+									href="<?php echo esc_url( $link_url ); ?>"
+									target="<?php echo esc_attr( $link_target ); ?>">
+                                   		<?php echo esc_html( $link_title ); ?>
+                                    
+									<span>
+										<img src="<?php bloginfo('template_url'); ?>/src/btn-arrow.svg" alt="link url for column item" width="25">
+									</span>
+                                </a>
+            
+                            <?php endif; ?>
+                        <?php endif; ?>
 						
 	               </div>
    	               <div class="col inScreen">
@@ -37,14 +52,30 @@
     					    <?php endif; ?>
 					    </div>
 						<h2 class="col-info" style="color:<?php the_sub_field('col3_color'); ?>">
-							<?php echo the_sub_field('content_left_center'); ?>
+							<?php echo the_sub_field('content_center'); ?>
 						</h2>
-						<a class="col-link" style="color:<?php echo the_sub_field('col3_color'); ?>" href="<?php the_sub_field('content_link_left'); ?>">
-							Learn More
-							<span>
-	                            <img src="<?php bloginfo('template_url'); ?>/src/btn-arrow.svg" alt="link url for column item" width="25">
-							</span>
-						</a>
+						
+						<?php if(get_sub_field('content_link_center') ): ?>
+                            <?php 
+                            $link = get_sub_field('content_link_center');
+                            if( $link ): 
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';
+                            ?>
+                                <a class="col-link" style="color:<?php echo the_sub_field('col3_color'); ?>"
+									href="<?php echo esc_url( $link_url ); ?>"
+									target="<?php echo esc_attr( $link_target ); ?>">
+                                   		<?php echo esc_html( $link_title ); ?>
+                                    
+									<span>
+										<img src="<?php bloginfo('template_url'); ?>/src/btn-arrow.svg" alt="link url for column item" width="25">
+									</span>
+                                </a>
+            
+                            <?php endif; ?>
+                        <?php endif; ?>
+						
 					  
 	               </div>
    	               <div class="col inScreen">
@@ -57,14 +88,29 @@
     					    <?php endif; ?>
 					    </div>
 						<h2 class="col-info" style="color:<?php the_sub_field('col3_color'); ?>">
-							<?php echo the_sub_field('content_left_right'); ?>
+							<?php echo the_sub_field('content_right'); ?>
 						</h2>
-						<a class="col-link" style="color:<?php echo the_sub_field('col3_color'); ?>" href="<?php the_sub_field('content_link_left'); ?>">
-							Learn More
-							<span>
-	                            <img src="<?php bloginfo('template_url'); ?>/src/btn-arrow.svg" alt="link url for column item" width="25">
-							</span>
-						</a>
+
+						<?php if(get_sub_field('content_link_right') ): ?>
+                            <?php 
+                            $link = get_sub_field('content_link_right');
+                            if( $link ): 
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';
+                            ?>
+                                <a class="col-link" style="color:<?php echo the_sub_field('col3_color'); ?>"
+									href="<?php echo esc_url( $link_url ); ?>"
+									target="<?php echo esc_attr( $link_target ); ?>">
+                                   		<?php echo esc_html( $link_title ); ?>
+                                    
+									<span>
+										<img src="<?php bloginfo('template_url'); ?>/src/btn-arrow.svg" alt="link url for column item" width="25">
+									</span>
+                                </a>
+            
+                            <?php endif; ?>
+                        <?php endif; ?>
 
 	               </div>
                 </div>
