@@ -29,7 +29,7 @@
                                         <?php the_sub_field('list_title_entry'); ?>
 
                                         <span class="inline">
-                                            <?php the_sub_field('list_price_entry'); ?>
+                                          $<?php the_sub_field('list_price_entry'); ?>
                                         </span>
                                     </li>
 

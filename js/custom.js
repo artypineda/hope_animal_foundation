@@ -3,13 +3,13 @@
 //viewport
 var inScreen = document.querySelectorAll('.inScreen');
 
-function onScroll() {
+onScroll = () => {
   for (var item of inScreen) {
     elementVisible(item);
   }
 }
 
-function elementVisible(el) {
+elementVisible = (el) => {
   let top = el.offsetTop;
   let height = el.offsetHeight;
   let bottom = top + height;
@@ -36,4 +36,3 @@ menu_worker = (e) => {
 }
 
 parentLink.addEventListener('mouseenter', menu_worker);
-

@@ -16,13 +16,11 @@
                     while( have_rows('veterinarians') ): the_row(); ?>
                         <div class="holder">
                         
-                            <div class="item">
-                                <?php
-                                $image = get_sub_field('photo');
-                                if( !empty( $image ) ): ?>
-                                    <?php echo wp_get_attachment_image( $image['ID'], 'medium' ); ?>
-                                <?php endif; ?>
-                            </div>
+                            <?php
+                            $image = get_sub_field('photo');
+                            if( !empty( $image ) ): ?>
+                                <?php echo wp_get_attachment_image( $image['ID'], 'large' ); ?>
+                            <?php endif; ?>
                             
                             <h3><?php the_sub_field('name'); ?></h3>
                             <p><?php the_sub_field('info'); ?></p>

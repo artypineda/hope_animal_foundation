@@ -19,7 +19,7 @@
                 $link_title = $link['title'];
                 $link_target = $link['target'] ? $link['target'] : '_self';
                 ?>
-                <button class="hopebtn3" style="border: 3px solid white;">
+                <button class="hopebtn3" style="border: 2px solid white;">
                     <a href="<?php echo esc_url( $link_url ); ?>"
                         style="color: <?php the_sub_field('button_banner_text_color'); ?>;"
                         target="<?php echo esc_attr( $link_target ); ?>">

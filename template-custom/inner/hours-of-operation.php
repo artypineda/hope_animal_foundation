@@ -3,19 +3,21 @@
     if( get_row_layout() == 'hours_of_operation' ):
 ?>
     <section style="background-color:var(--blue-aqua-2);">
-        <div class="container-simple banner1">
+        <div class="container-simple banner2">
         
             <h2>
                 <?php the_sub_field('title');?>
             </h2>
-            <div class="left">
-                <?php the_sub_field('hours_1');?>
-            </div>
-            <div class="middle">
-                <?php the_sub_field('hours_2');?>
-            </div>
-            <div class="right">
-                <?php the_sub_field('hours_3');?>
+            <div class="info" id="post-<?php the_ID(); ?>" >
+                <div class="left">
+                    <?php the_sub_field('hours_1');?>
+                </div>
+                <div class="middle">
+                    <?php the_sub_field('hours_2');?>
+                </div>
+                <div class="right">
+                    <?php the_sub_field('hours_3');?>
+                </div>
             </div>
         
         </div>

@@ -28,7 +28,7 @@
                                         <?php the_sub_field('list_title_entry'); ?>
                                     </li>
                                     <span>
-                                        $<?php the_sub_field('list_price_entry'); ?>
+                                        $ <?php the_sub_field('list_price_entry'); ?>
                                     </span>
                                 <?php endwhile; ?>
                                 </ul>

@@ -49,6 +49,7 @@ get_header();
 				require('template-custom/inner/margins.php');
         	    require('template-custom/inner/columns.php');
         	    require('template-custom/inner/columns2.php');
+        	    require('template-custom/inner/video.php');
         	?>
         
 		<?php endwhile; ?>
