@@ -94,6 +94,7 @@
  *******************/
 select#gtranslate_selector {
     background: transparent;
+    color: #fff;
     font-size: 12px;
     padding: 2px 5px;
     margin: 12px 0;
