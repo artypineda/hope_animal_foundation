@@ -89,6 +89,15 @@
   opacity: 1;
 }
 
+/**
+ * GT
+ *******************/
+select#gtranslate_selector {
+    background: transparent;
+    font-size: 12px;
+    padding: 2px 5px;
+    margin: 12px 0;
+}
 
 /**
 * Component Default 
@@ -789,6 +798,22 @@ a.col-link span img {
 .donate > .left .inner {
     padding: 80px;
 }
+    @media (max-width: 767px){
+       .donate > .left .inner {
+            padding: 35px;
+        } 
+    }
+    
+.spacing1 {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+    @media (max-width: 767px){
+       .spacing1 {
+            margin-left: 0;
+        } 
+    }
+
 .donate > .left .inner p {
     color: white;
 }
@@ -1807,6 +1832,10 @@ div.ctct-form-embed form.ctct-form-custom label.ctct-form-label {
 
 body:not(.home) main {
     background-color: var(--blue-aqua-2);
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+    border-color: var(--rich-blue);
 }
 
 .hasVid {
