@@ -653,6 +653,8 @@ a.col-link span img {
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
+    max-height: 520px;
+    overflow: hidden;
 }
 .col-map .map-settings > p {
     padding: 0;
@@ -661,7 +663,8 @@ a.col-link span img {
 }
 .col-map .map-settings iframe {
     width: 100%;
-    min-height: 520px;
+    min-height: 750px;
+    transform: translateY(-130px);
 }
 
 .col-location {
