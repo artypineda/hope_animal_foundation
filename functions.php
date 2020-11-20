@@ -20,6 +20,7 @@ if ( ! function_exists( 'hope_animal_foundation_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'hope_animal_foundation' ),
+				'menu-1m' => esc_html__( 'Primary - Mobile', 'hope_animal_foundation' ),
 				'menu-2' => esc_html__( 'Above The Header', 'hope_animal_foundation' ),
 				'menu-3' => esc_html__( 'Services Nav Menu - Footer', 'hope_animal_foundation' ),
 				'menu-4' => esc_html__( 'Support Us Nav Menu - Footer', 'hope_animal_foundation' ),

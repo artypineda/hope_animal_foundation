@@ -108,10 +108,10 @@
 
 					<nav class="mobile-menu" role="navigation"  aria-label="<?php _e( 'Navigation', 'hope_animal_foundation' ); ?>">    
 						<?php
-						if ( has_nav_menu( 'menu-1' ) ) {
+						if ( has_nav_menu( 'menu-1m' ) ) {
 							wp_nav_menu(
 								array(
-									'theme_location' => 'menu-1',
+									'theme_location' => 'menu-1m',
 									'menu_id'        => 'primary-menu-mobile',
 									'items_wrap'     => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
 								)
